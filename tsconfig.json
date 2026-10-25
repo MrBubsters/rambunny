@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "types": ["vite/client"],
+    "noEmit": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "allowImportingTsExtensions": false,
+
+    // Phase 1: game.ts is the HTML script moved over almost verbatim, so the
+    // checker runs in its lenient mode. Tighten these in Phase 2.
+    "strict": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false
+  },
+  "include": ["src"]
+}
